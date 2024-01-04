@@ -1,0 +1,15 @@
+* {
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #282222;
+}
+
+.title {
+    text-align: center;
+    padding: 50px 0;
+    color: #FFF;
+}
