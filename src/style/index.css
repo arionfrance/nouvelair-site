@@ -5,11 +5,219 @@
 }
 
 body {
-    background: #282222;
+    
 }
 
 .title {
     text-align: center;
     padding: 50px 0;
     color: #FFF;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+.navlink {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 25px 0;
+}
+.navbar .navlink a {
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px;
+}
+.navbar .navlink a:hover {
+    color: #D22515;
+}
+.navbar .navlink .button span {
+    margin-right: 20px;
+}
+.navbar .navlink .button span img {
+    margin-right: 20px;
+}
+.navbar .navlink .button button {
+    background: #D22515;
+    padding: 15px 25px;
+    margin-top: -20px;
+    border: 0;
+}
+.navbar .navlink .button button a {
+    color: #FFF;
+}
+
+.header .img .txt {
+    position: absolute;
+    width: 709px;
+}
+.header .img .header-img {
+    width: 100%;
+    height: 720px;
+    background: linear-gradient(105deg, rgba(0, 0, 0, 0.80) 0.88%, rgba(0, 0, 0, 0.00) 93.13%), url('/src/img/header.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}   
+.header .img .txt .title {
+    text-align: left;
+    font-size: 48px;
+    padding: 100px 75px;
+}
+.header .img .txt button {
+    background: #D22515;
+    padding: 15px 25px;
+    border: 0;
+    margin-left: 75px;
+    font-size: 18px;
+}
+.header .img .txt button a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.section1 .title {
+    color: #000;
+    font-size: 20px;
+}
+.section1 .logo-partenaire  {
+    text-align: center;
+}
+.section1 .logo-partenaire {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0 50px 0;
+}
+
+.section2 {
+    background: #000;
+    color: #FFF;
+    padding: 25px 50px 100px 50px;
+    margin-bottom: 50px;
+}
+.section2 .title {
+    font-size: 38px;
+    margin: 0;
+}
+.section2 .txt {
+    text-align: center;
+    font-size: 20px;
+}
+.section2 .content {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.section2 .content span {
+    font-size: 24px;
+}
+.section2 .content .txt-content {
+    padding: 10px 20px 0 0;
+    line-height: 1.6;
+}
+
+.section3 {
+    width: 50%;
+    margin: 0 auto;
+}
+.section3 .title {
+    color: #000;
+    font-size: 38px;
+}
+.section3 .content .bloc1, .section3 .content .bloc2, .section3 .content .bloc3 {
+    display: flex;
+}
+.section3 .content .bloc1 .txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    line-height: 1.6;
+    padding: 15% 50px;
+    width: 100%;
+}
+.section3 .content .bloc1 .txt p {
+    font-size: 20px;
+}
+
+@media screen and (min-width: 1000px) {
+    .header .img .txt .title {
+        text-align: left;
+        font-size: 48px;
+        padding: 100px 75px;
+    }   
+}
+
+@media screen and (min-width: 1200px) {
+    .header .img .txt .title {
+        text-align: left;
+        font-size: 55px;
+        padding: 100px 75px;
+    }   
+}
+
+@media screen and (min-width: 1300px) {
+    .header .img .txt .title {
+        text-align: left;
+        font-size: 75px;
+        padding: 100px 75px;
+    }   
+}
+
+
+@media screen and (min-width: 851px) {
+    .hamburger-icon, #menu-toggle {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10px;
+        background-color:  var(--header-background);
+    }
+    .navbar .navlink a {
+        padding: 15px 0;
+    }
+    .navbar .navlink .button {
+        padding: 15px 0;
+    }
+    @media screen and (max-width: 668px) {
+        .navbar .navlink .button button{
+            margin-top: 25px;
+        }
+    }   
+    .header .header-nav .header-link {
+        margin: 0;
+    }
+    .header-link {
+        display: none;
+    }
+    .hamburger-icon {
+        cursor: pointer;
+        font-size: 30px;
+        margin-right: 10px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-toggle:checked + .hamburger-icon + .links{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        box-shadow: 0px 10px 9px -6px #6e6e6e;
+        background-color: var(--header-background);
+        padding: 12.5px;
+        width: 50%;
+    }    
 }
